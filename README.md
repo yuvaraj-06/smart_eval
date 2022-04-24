@@ -1,7 +1,12 @@
-# probably-smart-eval
+# smart-eval aka Canny.ai
+
 Smart-Eval-StartUp-Idea-Implementations
 
+
+#### Website : https://yuvaraj-06.github.io/smart_eval/
+
 # Dependencies
+
 * sentence-transformers
 * textblob
 * symspellpy
