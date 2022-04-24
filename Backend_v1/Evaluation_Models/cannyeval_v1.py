@@ -6,7 +6,7 @@ import numpy as np
 import warnings
 import re
 from textblob import TextBlob
-#from symspellpy.symspellpy import SymSpell
+from symspellpy.symspellpy import SymSpell
 from tqdm import tqdm
 import pandas as pd
 #import bar_chart_race as bcr 
@@ -15,9 +15,9 @@ from math import *
 #import matplotlib.animation as ani
 import matplotlib.pyplot as plt
 import json
- 
+import spacy
 import pickle
- 
+import dill
 #import neuralcoref    commenting for now
 import nltk
 nltk.download('averaged_perceptron_tagger')
@@ -57,9 +57,6 @@ class CannyEval():
     self.phrase_match_scores = None
     self.phrases_ratios = None
     pass
-
-  # Online Python compiler (interpreter) to run Python online.
-# Write Python 3 code in this online editor and run it.
 
 
   @staticmethod
@@ -547,19 +544,10 @@ class CannyEval():
 
       extra_info["Student Aggregate"] = np.mean(report_csv["Student Aggregate"])
       extra_info = pd.DataFrame(extra_info, index=["Class Mean"])
-
       report_csv = pd.concat([report_csv, extra_info], axis=0)
 
       self.report = report_csv
-      print(extra_info.to_json)
-      print("------")
-      print(self.disorienting_sens)
-      print(self.disorienting_phrases)
-      print("------")
-      print(self.orienting_sens)
-      print(self.orienting_phrases)
-      
-      return {'report':json.loads(report_csv.to_json()),'dis_sens':self.disorienting_sens,'dis_prahes':self.disorienting_phrases,'ori_sens':self.orienting_sens,'ori_prahes':self.orienting_phrases}
+      return report_csv
     except AssertionError as msg:
       return msg, type(msg)
 
