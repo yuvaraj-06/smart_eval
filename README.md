@@ -1,4 +1,12 @@
-# smart-eval aka Canny.ai
+#  Canny.ai
+
+![alt text](https://github.com/yuvaraj-06/smart_eval/blob/main/whole.PNG)
+
+# Algorithm
+
+![alt text](https://github.com/yuvaraj-06/smart_eval/blob/main/algo-1.PNG)
+
+![alt text](https://github.com/yuvaraj-06/smart_eval/blob/main/algo-2.PNG)
 
 Smart-Eval-StartUp-Idea-Implementations
 
